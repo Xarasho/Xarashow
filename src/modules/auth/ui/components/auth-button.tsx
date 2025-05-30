@@ -8,6 +8,11 @@ import { UserButton, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 export const AuthButton = () => {
   return (
     <>
+      <SignedIn>
+        <UserButton />
+        {/* Add menu items for Studio and User profile */}
+      </SignedIn>
+
       <SignedOut>
         <SignInButton mode="modal">
           <Button 
